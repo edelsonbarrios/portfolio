@@ -130,7 +130,7 @@ export const projects: Project[] = [
       ],
     },
   },
-  {
+    {
     slug: 'racquel-pharmacy-system',
     title: 'Sales and Inventory Management System for Racquel Pharmacy',
     status: 'academic',
@@ -147,7 +147,10 @@ export const projects: Project[] = [
         'A web-based application designed to streamline the sales and inventory operations of the Makabud Branch of Racquel Pharmacy. ' +
         'It manages product stocks, purchase orders, stock replenishment, inventory adjustments and point-of-sale transactions. ' +
         'It also includes employee account management, authentication, and record archiving and restoration.',
-      role: 'TODO: state your specific role in the thesis (and the team size if it was a group).',
+      role:
+        'This was a group thesis with a team of four. ' +
+        'I built the Purchase Order Management, Employee and Account Management, and Data Archiving and Restoration features, including their Angular components. ' +
+        'I connected the Angular services to the backend endpoints for these features, and I implemented the JWT authentication.',
       features: [
         'Purchase orders, stock replenishment, stock entry and inventory adjustments',
         'Point-of-sale transactions',
@@ -156,8 +159,14 @@ export const projects: Project[] = [
         'Archiving and restoration of product, inventory, employee and reference data',
       ],
       architectureNote:
-        'TODO: explain why classic Repository, Service, Controller layers were chosen.',
-      challenges: ['TODO: add challenges and what you learned.'],
+        'I chose a layered Repository, Service, Controller structure because it is the standard structure for ASP.NET Core projects and it was easy for the whole team to follow. ' +
+        'Not everyone on the team of four was a programmer, so I kept the structure simple and conventional.',
+      challenges: [
+        'Setting up JWT login and access control for different roles.',
+        'Designing the database and the relationships between its tables.',
+        'Keeping inventory consistent across stock changes.',
+        'Integrating the Angular frontend with the backend.',
+      ],
     },
   },
 ];
