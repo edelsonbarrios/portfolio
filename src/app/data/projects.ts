@@ -64,7 +64,7 @@ export const projects: Project[] = [
         'Login is through Google authentication.',
       role:
         'I built BudgetFlow end to end. On the Spring Boot backend I wrote the REST endpoints, entities, repositories, services and the PostgreSQL database design, including Google ID token verification and JWT login. ' +
-        'The Angular frontend (routing, services, pagination, reactive forms) was built with AI assistance to save time, and I understand how it works. ' +
+        'I built the Angular frontend (routing, services, pagination, reactive forms) and deployed the app: Vercel for the frontend, Render for the backend and Neon for the database.' +
         'I also deployed the app: Vercel for the frontend, Render for the backend and Neon for the database.',
       features: [
         'Monthly budgets with expense tracking by category',
@@ -149,8 +149,8 @@ export const projects: Project[] = [
         'It also includes employee account management, authentication, and record archiving and restoration.',
       role:
         'This was a group thesis with a team of four. ' +
-        'I built the Purchase Order Management, Employee and Account Management, and Data Archiving and Restoration features, including their Angular components. ' +
-        'I connected the Angular services to the backend endpoints for these features, and I implemented the JWT authentication.',
+        'I built the Purchase Order Management, Employee and Account Management, and Data Archiving and Restoration features, including their backend endpoints and Angular components. ' +
+        'I implemented the JWT authentication, and I connected the Angular services to the backend endpoints across the whole system.',
       features: [
         'Purchase orders, stock replenishment, stock entry and inventory adjustments',
         'Point-of-sale transactions',
