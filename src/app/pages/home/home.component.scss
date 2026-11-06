@@ -133,6 +133,33 @@ h1 {
   color: var(--text-muted);
 }
 
+.skills {
+  margin: 0;
+  border-top: 1px solid var(--border);
+}
+
+.skill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.skill-row dt {
+  flex: 0 0 200px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.skill-row dd {
+  flex: 1 1 280px;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-body);
+}
+
 @media (max-width: 900px) {
   .hero-grid {
     grid-template-columns: 1fr;

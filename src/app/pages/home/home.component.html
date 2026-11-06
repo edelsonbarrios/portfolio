@@ -47,3 +47,17 @@
     </div>
   </div>
 </section>
+
+<section id="skills" class="section">
+  <div class="container">
+    <h2>Skills</h2>
+    <dl class="skills">
+      @for (group of skills; track group.label) {
+        <div class="skill-row">
+          <dt>{{ group.label }}</dt>
+          <dd>{{ group.items.join(', ') }}</dd>
+        </div>
+      }
+    </dl>
+  </div>
+</section>
