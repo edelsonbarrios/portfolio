@@ -36,3 +36,14 @@
     </aside>
   </div>
 </section>
+
+<section id="projects" class="section">
+  <div class="container">
+    <h2>Selected projects</h2>
+    <div class="project-list">
+      @for (p of projects; track p.slug) {
+        <app-project-row [project]="p" />
+      }
+    </div>
+  </div>
+</section>
