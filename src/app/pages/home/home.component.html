@@ -61,3 +61,32 @@
     </dl>
   </div>
 </section>
+
+<section id="contact" class="section get-in-touch">
+  <div class="container">
+    <h2>Get in touch</h2>
+    <p>
+      The quickest way to reach me is by email. You can also find me on
+      LinkedIn and GitHub.
+    </p>
+    <div class="actions">
+      <a class="btn btn-primary" [href]="'mailto:' + profile.email"
+        >Email me</a
+      >
+      <a
+        class="btn btn-outline"
+        [href]="profile.linkedin"
+        target="_blank"
+        rel="noopener"
+        >LinkedIn</a
+      >
+      <a
+        class="btn btn-outline"
+        [href]="profile.github"
+        target="_blank"
+        rel="noopener"
+        >GitHub</a
+      >
+    </div>
+  </div>
+</section>
