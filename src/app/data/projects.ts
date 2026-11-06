@@ -89,7 +89,7 @@ export const projects: Project[] = [
     status: 'deploying-soon',
     statusLabel: 'Deploying soon',
     summary:
-      'A formal wear rental system where customers browse and reserve attire online and pay through GCash, while staff manage inventory and confirm rentals from an admin side.',
+      'A formal wear rental system where customers browse and reserve attire online and send a GCash payment reference, while staff manage inventory and confirm rentals from an admin side.',
     architecture: 'CQRS with Mediator',
     tags: [
       'C#',
@@ -104,16 +104,30 @@ export const projects: Project[] = [
       github: 'https://github.com/edelsonbarrios/FormalAttireRental',
     },
     caseStudy: {
-      problem: 'TODO: describe the problem this project solves and who it is for.',
-      role: 'TODO: describe what you personally built on this project.',
+      problem:
+        'Renting formal wear usually means visiting physical shops to find out what is available. ' +
+        'Formal Rental Attire is a personal practice project, not built for a real shop, that moves this online. ' +
+        'Customers can see the available clothes with their rental price, available quantity and number of rental days, and reserve them without visiting a shop. ' +
+        'Staff manage the inventory and confirm reservations from an admin side.',
+      role:
+        'I built Formal Rental Attire end to end: the ASP.NET Core backend using CQRS with Mediator, the PostgreSQL database, Google OAuth sign-in, and the Angular frontend.',
       features: [
         'Google OAuth sign-in',
-        'Online rental reservations with GCash payment',
-        'TODO: add one to three more key features.',
+        'Customers browse clothes with rental price, available quantity and rental days, and reserve them online',
+        'Customers send a GCash reference number with a screenshot as payment proof, and staff confirm the payment to confirm the reservation',
+        'Inventory management: stock entry, stock adjustment, and purchase orders from creation through receiving stock',
+        'Employee accounts with role-based access, timestamped audit logs, and archiving and restoring of records',
       ],
       architectureNote:
-        'TODO: explain why CQRS with Mediator was chosen for this project.',
-      challenges: ['TODO: add challenges and what you learned.'],
+        'I chose CQRS with Mediator because I wanted to learn how proper system design and architecture work, and to practice clean coding. ' +
+        'Each action, such as creating a reservation, confirming a rental or receiving stock, is its own command or query with its own handler. ' +
+        'This keeps the code easy to read and makes the application easier to scale. ' +
+        'I built the thesis project with a layered Repository, Service, Controller structure, so the two projects let me compare both approaches.',
+      challenges: [
+        'Keeping inventory consistent across stock changes.',
+        'Designing the database and the relationships between its tables.',
+        'Setting up Google OAuth sign-in.',
+      ],
     },
   },
   {
