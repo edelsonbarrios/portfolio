@@ -10,7 +10,8 @@ export interface Profile {
   linkedin: string;
   github: string;
   resumeUrl: string;       // file inside public/
-  resumeFileName: string;  // name the browser uses when downloading
+  resumeFileName: string;
+  description: string;     // short text for search results and link previews  // name the browser uses when downloading
 }
 
 export const profile: Profile = {
@@ -26,4 +27,6 @@ export const profile: Profile = {
   github: 'https://github.com/edelsonbarrios',
   resumeUrl: '/resume.pdf',
   resumeFileName: 'Edelson-Barrios-Resume.pdf',
+    description:
+    'Portfolio of Edelson Q. Barrios, a software engineer who builds web applications with Angular, C# / ASP.NET Core and Java / Spring Boot. See projects and contact details.',
 };
