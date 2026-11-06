@@ -62,7 +62,10 @@ export const projects: Project[] = [
         'BudgetFlow is a personal budget and savings tracker designed to help users manage their finances and monitor their expenses. ' +
         'Users can set monthly budgets, track expenses by category, manage recurring expenses, and create savings goals to monitor progress toward financial targets. ' +
         'Login is through Google authentication.',
-      role: 'TODO: describe what you personally built on BudgetFlow.',
+      role:
+        'I built BudgetFlow end to end. On the Spring Boot backend I wrote the REST endpoints, entities, repositories, services and the PostgreSQL database design, including Google ID token verification and JWT login. ' +
+        'The Angular frontend (routing, services, pagination, reactive forms) was built with AI assistance to save time, and I understand how it works. ' +
+        'I also deployed the app: Vercel for the frontend, Render for the backend and Neon for the database.',
       features: [
         'Monthly budgets with expense tracking by category',
         'Recurring expenses',
@@ -71,8 +74,13 @@ export const projects: Project[] = [
         'Reactive forms with frontend and backend validation, and API error handling for consistent input',
       ],
       architectureNote:
-        'TODO: explain why Angular with a Spring Boot REST backend was chosen.',
-      challenges: ['TODO: add challenges and what you learned.'],
+        'I chose a Spring Boot REST backend because I wanted to learn a different backend from my other projects, which use C# and ASP.NET Core. ' +
+        'The Angular frontend talks to the backend only through REST endpoints, so the two parts are built and deployed separately (Vercel for the frontend, Render for the backend).',
+      challenges: [
+        'Setting up Google Sign-in and verifying the Google ID token on the backend before issuing an application JWT.',
+        'Validating input on both the frontend and the backend, so the backend still rejects bad requests even if the frontend is bypassed.',
+        'Learning how Spring annotations and beans work, coming from C# and ASP.NET Core.',
+      ],
     },
   },
   {
