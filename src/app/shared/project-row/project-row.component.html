@@ -1,0 +1,37 @@
+<article class="row">
+  <div class="media">
+    @if (project().screenshot) {
+      <img [src]="project().screenshot" [alt]="'Screenshot of ' + project().title" />
+    } @else {
+      <div class="placeholder" aria-hidden="true"></div>
+    }
+  </div>
+
+  <div class="details">
+    <app-status-label [status]="project().status" [label]="project().statusLabel" />
+    <h3>{{ project().title }}</h3>
+    <p class="summary">{{ project().summary }}</p>
+
+    @if (project().architecture) {
+      <p class="architecture">
+        <strong>Architecture:</strong> {{ project().architecture }}
+      </p>
+    }
+
+    <div class="tags">
+      @for (tag of project().tags; track tag) {
+        <app-tag-chip [label]="tag" />
+      }
+    </div>
+
+    <div class="links">
+      @if (project().links.live) {
+        <a [href]="project().links.live" target="_blank" rel="noopener">Live demo</a>
+      }
+      @if (project().links.github) {
+        <a [href]="project().links.github" target="_blank" rel="noopener">GitHub</a>
+      }
+      <a [routerLink]="['/projects', project().slug]">Case study</a>
+    </div>
+  </div>
+</article>
