@@ -1,0 +1,93 @@
+<main id="main" class="container page">
+  <a class="back" routerLink="/" fragment="projects">← Back to projects</a>
+
+  @if (project(); as p) {
+    <header class="head">
+      <app-status-label [status]="p.status" [label]="p.statusLabel" />
+      <h1>{{ p.title }}</h1>
+      <p class="summary">{{ p.summary }}</p>
+
+      <div class="links">
+        @if (p.links.live) {
+          <a [href]="p.links.live" target="_blank" rel="noopener">Live demo</a>
+        }
+        @if (p.links.github) {
+          <a [href]="p.links.github" target="_blank" rel="noopener">GitHub</a>
+        }
+        @if (p.caseStudy.demoVideo) {
+          <a [href]="p.caseStudy.demoVideo" target="_blank" rel="noopener"
+            >Demo video</a
+          >
+        }
+      </div>
+    </header>
+
+    <div class="media">
+      @if (p.screenshot) {
+        <img [src]="p.screenshot" [alt]="'Screenshot of ' + p.title" />
+      } @else {
+        <div class="placeholder" aria-hidden="true"></div>
+      }
+    </div>
+
+    @if (p.caseStudy.gallery?.length) {
+      <div class="gallery">
+        @for (img of p.caseStudy.gallery; track img) {
+          <img [src]="img" [alt]="'Screenshot of ' + p.title" loading="lazy" />
+        }
+      </div>
+    }
+
+    <section>
+      <h2>Problem</h2>
+      <p>{{ p.caseStudy.problem }}</p>
+    </section>
+
+    <section>
+      <h2>My role</h2>
+      <p>{{ p.caseStudy.role }}</p>
+    </section>
+
+    <section>
+      <h2>Tech stack</h2>
+      <div class="tags">
+        @for (tag of p.tags; track tag) {
+          <app-tag-chip [label]="tag" />
+        }
+      </div>
+    </section>
+
+    <section>
+      <h2>Key features</h2>
+      <ul>
+        @for (feature of p.caseStudy.features; track feature) {
+          <li>{{ feature }}</li>
+        }
+      </ul>
+    </section>
+
+    <section>
+      <h2>Architecture</h2>
+      @if (p.architecture) {
+        <p class="architecture"><strong>{{ p.architecture }}</strong></p>
+      }
+      <p>{{ p.caseStudy.architectureNote }}</p>
+    </section>
+
+    <section>
+      <h2>Challenges and learnings</h2>
+      <ul>
+        @for (item of p.caseStudy.challenges; track item) {
+          <li>{{ item }}</li>
+        }
+      </ul>
+    </section>
+
+    <a class="back bottom" routerLink="/" fragment="projects"
+      >← Back to projects</a
+    >
+  } @else {
+    <h1>Project not found</h1>
+    <p>There is no project at this address.</p>
+  }
+</main>
