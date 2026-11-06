@@ -1,0 +1,17 @@
+<header class="site-header">
+  <div class="container bar">
+    <a class="site-name" routerLink="/">{{ profile.name }}</a>
+
+    <nav class="nav" aria-label="Main">
+      <a routerLink="/" fragment="projects">Projects</a>
+      <a routerLink="/" fragment="skills">Skills</a>
+      <a routerLink="/" fragment="contact">Contact</a>
+      <a
+        class="resume-btn"
+        [href]="profile.resumeUrl"
+        [attr.download]="profile.resumeFileName"
+        >Resume</a
+      >
+    </nav>
+  </div>
+</header>

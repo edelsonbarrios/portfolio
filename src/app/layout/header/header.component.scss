@@ -1,0 +1,67 @@
+.site-header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+  min-height: 72px;
+}
+
+.site-name {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 24px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-size: 16px;
+    color: var(--text-muted);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--text);
+    }
+  }
+}
+
+.nav .resume-btn {
+  padding: 0 20px;
+  font-weight: 500;
+  color: #ffffff;
+  background: var(--accent);
+  border-radius: 6px;
+
+  &:hover {
+    color: #ffffff;
+    background: var(--accent-hover);
+  }
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
