@@ -53,6 +53,7 @@ export const projects: Project[] = [
       'Render',
       'Neon',
     ],
+    screenshot: "budgetflow_dashboard.png",
     links: {
       live: 'https://budget-flow-q8wg.vercel.app/',
       github: 'https://github.com/edelsonbarrios/BudgetFlow',
