@@ -1,0 +1,25 @@
+.site-footer {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+  min-height: 72px;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-muted);
+}
