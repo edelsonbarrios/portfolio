@@ -1,0 +1,38 @@
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="intro">
+      <p class="eyebrow">{{ profile.title }}</p>
+      <h1>{{ profile.name }}</h1>
+      <p class="lead">{{ profile.intro }}</p>
+
+      <div class="actions">
+        <a
+          class="btn btn-primary"
+          [href]="profile.resumeUrl"
+          [attr.download]="profile.resumeFileName"
+          >Download resume</a
+        >
+        <a class="btn btn-outline" routerLink="/" fragment="projects"
+          >View projects</a
+        >
+      </div>
+    </div>
+
+    <aside class="contact" aria-label="Contact">
+      <p class="contact-label">Contact</p>
+      <ul>
+        <li>
+          <a [href]="'mailto:' + profile.email">{{ profile.email }}</a>
+        </li>
+        <li>
+          <a [href]="profile.linkedin" target="_blank" rel="noopener"
+            >LinkedIn</a
+          >
+        </li>
+        <li>
+          <a [href]="profile.github" target="_blank" rel="noopener">GitHub</a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+</section>
