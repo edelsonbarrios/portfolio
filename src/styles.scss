@@ -139,3 +139,9 @@ a:hover {
   margin: 0 auto;                  /* centers the container */
   padding: 0 var(--container-padding);
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
