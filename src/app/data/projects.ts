@@ -101,6 +101,7 @@ export const projects: Project[] = [
       'Mediator',
       'Google OAuth',
     ],
+    screenshot: 'fra_rep.png',
     links: {
       github: 'https://github.com/edelsonbarrios/FormalAttireRental',
       live: 'https://formal-attire-rental-inag.vercel.app/'
