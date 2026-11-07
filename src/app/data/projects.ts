@@ -103,6 +103,7 @@ export const projects: Project[] = [
     ],
     links: {
       github: 'https://github.com/edelsonbarrios/FormalAttireRental',
+      live: 'https://formal-attire-rental-inag.vercel.app/'
     },
     caseStudy: {
       problem:
