@@ -87,8 +87,8 @@ export const projects: Project[] = [
   {
     slug: 'formal-rental-attire',
     title: 'Formal Rental Attire',
-    status: 'deploying-soon',
-    statusLabel: 'Deploying soon',
+    status: 'live',
+    statusLabel: 'Live · Deployed on Vercel, Render and Neon',
     summary:
       'A formal wear rental system where customers browse and reserve attire online and send a GCash payment reference, while staff manage inventory and confirm rentals from an admin side.',
     architecture: 'CQRS with Mediator',
