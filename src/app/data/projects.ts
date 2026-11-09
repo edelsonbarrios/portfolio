@@ -39,7 +39,7 @@ export const projects: Project[] = [
     status: 'live',
     statusLabel: 'Live · Deployed on Vercel, Render and Neon',
     summary:
-      'A personal budget and savings tracker that helps users manage monthly budgets, expenses and savings goals.',
+      'A personal budget and savings tracker that helps users manage monthly budgets, track expenses, manage recurring expenses, and monitor savings goals.'
     tags: [
       'Angular',
       'Java',
