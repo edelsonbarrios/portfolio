@@ -39,7 +39,7 @@ export const projects: Project[] = [
     status: 'live',
     statusLabel: 'Live · Deployed on Vercel, Render and Neon',
     summary:
-      'A personal budget and savings tracker that helps users manage monthly budgets, track expenses, manage recurring expenses, and monitor savings goals.'
+      'A personal budget and savings tracker that helps users manage monthly budgets, track expenses, manage recurring expenses, and monitor savings goals.',
     tags: [
       'Angular',
       'Java',
@@ -60,23 +60,34 @@ export const projects: Project[] = [
     },
     caseStudy: {
       problem:
-        'BudgetFlow is a personal budget and savings tracker designed to help users manage their finances and monitor their expenses. ' +
-        'Users can set monthly budgets, track expenses by category, manage recurring expenses, and create savings goals to monitor progress toward financial targets. ' +
-        'Login is through Google authentication.',
+        `Managing personal finances can become difficult when users need to keep track of their monthly budgets, expenses, recurring payments, and savings goals.
+         Without a centralized way to organize and monitor these financial activities, it can be challenging to understand spending habits and stay within budgets.
+
+         Budgetflow addresses this by providing a centralized platform where users can monthly budgets track expenses by category, manage recurring expenses, and monitor their progress
+         toward savings goals. Users can securely sign in using Google authentication.`,
       role:
-        'I built BudgetFlow end to end. On the Spring Boot backend I wrote the REST endpoints, entities, repositories, services and the PostgreSQL database design, including Google ID token verification and JWT login. ' +
-        'I built the Angular frontend (routing, services, pagination, reactive forms) and deployed the app: Vercel for the frontend, Render for the backend and Neon for the database.' +
-        'I also deployed the app: Vercel for the frontend, Render for the backend and Neon for the database.',
+        `I developed BudgetFlow end to end, handling both backend and frontend development, database design, and deployment.
+
+        On the backend, I developed REST APIs using Spring Boot, implemented entities, repositories, and services, designed the PostgreSQL database, and integrated Google authentication with JWT-based authentication.
+
+        On the frontend, I developed the angular application, implementing routing, API integration, pagination, and reactive forms.
+
+        I also handled deployment, hosting the frontend on Vercel, the backend on Render, and the PostgreSQL database on Neon.
+        `,
       features: [
-        'Monthly budgets with expense tracking by category',
-        'Recurring expenses',
+        'Monthly budget management with expense tracking by category',
+        'Recurring expense management',
         'Savings goals with progress toward financial targets',
         'Google Sign-in: the Spring Boot backend verifies the Google ID token and issues an application-specific JWT for authenticated API access',
-        'Reactive forms with frontend and backend validation, and API error handling for consistent input',
+        'Form Validation and Error Handling: Reactive forms with frontend and backend validation, including API error handling for consistent input validation and user feedback.',
       ],
       architectureNote:
-        'I chose a Spring Boot REST backend because I wanted to learn a different backend from my other projects, which use C# and ASP.NET Core. ' +
-        'The Angular frontend talks to the backend only through REST endpoints, so the two parts are built and deployed separately (Vercel for the frontend, Render for the backend).',
+      `BudgetFlow follows a client-server architecture, with an Angular frontend communicating with a Spring Boot backend through REST APIs. The backend follows a layered architecture, separating controllers, services, and repositories to keep request handling, business logic, and database operations organized
+      
+      The frontend and backend are developed and deployed independently, with the frontend hosted on Vercel and the backend on Render. PostgreSQL, hosted on Neon, serves as the application's database.
+
+      I chose Spring Boot for this project to gain experience with a different backend technology, having previously worked with C# and ASP.NET Core.
+      `,
       challenges: [
         'Setting up Google Sign-in and verifying the Google ID token on the backend before issuing an application JWT.',
         'Validating input on both the frontend and the backend, so the backend still rejects bad requests even if the frontend is bypassed.',
