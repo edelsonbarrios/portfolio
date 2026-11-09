@@ -100,6 +100,9 @@ export const projects: Project[] = [
       'CQRS',
       'Mediator',
       'Google OAuth',
+      'Vercel',
+      'Render',
+      'Neon'
     ],
     screenshot: 'fra_rep.png',
     links: {
